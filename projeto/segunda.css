@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background: rgb(247, 232, 213);
+    padding-inline: 10PX;
+}
+
+.nav{
+    max-width: 1280px;
+    height: 60px;
+    margin-inline: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a{
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 3px;
+    width: 120px;
+    text-align: center;
+    padding: 6px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    background-color: rgb(243, 173, 208);
+    color: #fff;
+    box-shadow: 2px 2px 2px #000;
+}
