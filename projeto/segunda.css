@@ -1,33 +1,179 @@
-*{
+/* Reseta os estilos padrões */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
 }
 
+/* Estiliza o corpo da página */
+body {
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+    background-image: url(img-1.jpg);
+    
+}
+
+/* Estiliza o cabeçalho e o link de navegação */
 header{
-    background: rgb(247, 232, 213);
-    padding-inline: 10PX;
+    background: rgb(245, 220, 187);
+    padding-inline: 700PX;
 }
 
 .nav{
-    max-width: 1280px;
-    height: 60px;
-    margin-inline: auto;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;            
+    position: fixed;          
+    top: 0;                     
+    left: 0;                   
+    background-color: rgb(247, 232, 213);    
+    padding: 15px 0;            
+    text-align: center;         
+    color: white;               
+    z-index: 1000;
 }
 
-a{
+.nav a:hover {
+    color: #f829d6;
+}
+
+.btn-link{
     margin: 10px;
     text-decoration: none;
     border-radius: 3px;
-    width: 120px;
-    text-align: center;
-    padding: 6px;
+    width: 160px;
+    padding: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
-    background-color: rgb(243, 173, 208);
+    background-color: rgb(231, 83, 157);
     color: #fff;
     box-shadow: 2px 2px 2px #000;
+}
+/* Estilos para os contêineres principais */
+.container, .container2, .container3 {
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 55px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Títulos das seções */
+h2 {
+    color: #f899d1;
+    text-shadow: 1px 1px 1px #000;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Estilos para os grupos de input */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input-group input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #090b0e;
+}
+
+/* Estilos para o botão de cadastro */
+button[type="submit"] {
+    background-color:  #ee60cb;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #46f55d;
+}
+
+/* Mensagem de erro */
+#mensagem-erro {
+    color: #ff4d4f;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Estilo da lista de cadastros */
+#lista-cadastros {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Estilo para cada item de cadastro */
+.cadastro-item {
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.cadastro-item h3 {
+    margin-bottom: 5px;
+    color: #007bff;
+}
+
+/* Estilos para botões de edição e exclusão */
+button {
+    padding: 8px 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 5px;
+    color: #fff;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button[onclick^="editarCadastro"] {
+    background-color: #f8db84;
+    margin-right: 5px;
+}
+
+button[onclick^="deletarCadastro"] {
+    background-color: #f16c7a;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .container, .container2, .container3 {
+        width: 90%;
+    }
 }

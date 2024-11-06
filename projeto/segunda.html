@@ -3,14 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>segunda pag</title>
+    <title>Cadastro de Pets</title>
     <link rel="stylesheet" href="segunda.css">
 </head>
 <body>
     <header>
         <nav class="nav">
-             <a href="primeira.html"> Voltar </a>
+            <a href="primeira.html" class="btn-link"> VOLTAR </a>
         </nav>
     </header> 
+
+    <section>
+        <!-- Formulário de Cadastro do Pet -->
+        <div class="container">
+            <h2>Cadastro do Seu Pet</h2>
+            <form id="form-cadastro-pet">
+                <div class="input-group">
+                    <label for="nome-pet">Nome:</label>
+                    <input type="text" id="nome-pet" name="nome" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="idade">Idade:</label>
+                    <input type="number" id="idade" name="idade" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="genero">Gênero:</label>
+                    <input type="text" id="genero" name="genero" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="porte">Porte:</label>
+                    <input type="text" id="porte" name="porte" required> 
+                </div>
+
+                <div class="input-group">
+                    <label for="peso">Peso:</label>
+                    <input type="number" id="peso" name="peso" required> 
+                </div>
+            </form>
+        </div>
+
+        <!-- Formulário de Cadastro do Tutor -->
+        <div class="container2">
+            <h2>Informações do Tutor</h2>
+            <form id="form-cadastro-tutor">
+                <div class="input-group">
+                    <label for="nome-tutor">Nome:</label>
+                    <input type="text" id="nome-tutor" name="nome" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" name="endereco" required>
+                </div>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+            <p id="mensagem-erro"></p>
+        </div>
+    </section>
+
+    <!-- Seção para Exibir Cadastros -->
+    <section class="container3">
+        <h2>Cadastro Realizados</h2>
+        <div id="lista-cadastros"></div> 
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
