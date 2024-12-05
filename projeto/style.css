@@ -33,7 +33,7 @@ h1 {
     margin-bottom: 30px;
 }
 
-div{
+article{
     background-color: transparent;
     backdrop-filter: blur(40px);
     width: 600px;
@@ -81,3 +81,7 @@ section{
     }
 }
 
+footer{
+    display: flex;
+    justify-content: center;
+}
